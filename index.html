@@ -1,240 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>German Public University Guidance</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Premier Germany Education | German Public University Guidance</title>
+
 <style>
+/* ================= GLOBAL ================= */
+* { box-sizing: border-box; scroll-behavior: smooth; }
+
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    background: #f4f6f8;
-    color: #222;
-    line-height: 1.7;
+  margin: 0;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  background: #f3f6fb;
+  color: #1f2937;
+  line-height: 1.7;
 }
 
+a { text-decoration: none; }
+
+/* ================= NAVBAR ================= */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15,76,129,0.9);
+  backdrop-filter: blur(8px);
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .brand {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+nav a {
+  color: #eaf3ff;
+  margin-left: 22px;
+  font-size: 15px;
+}
+
+nav a:hover { text-decoration: underline; }
+
+/* ================= HERO ================= */
 header {
-    background: linear-gradient(135deg, #0f4c81, #1e88e5);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+  background: linear-gradient(135deg, #0f4c81, #1e88e5);
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-box {
+  max-width: 850px;
+  margin: auto;
+  background: rgba(255,255,255,0.12);
+  padding: 40px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
 }
 
 header h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: #ffffff;
+  font-size: 46px;
+  margin-bottom: 12px;
 }
 
 header p {
-    font-size: 18px;
-    margin: 6px 0;
-    color: #eaf3ff;
+  font-size: 18px;
+  color: #eaf3ff;
 }
 
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  margin: 18px 10px 0;
+  padding: 14px 34px;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #ff9800;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #e68900;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #0f4c81;
+}
+
+/* ================= SECTIONS ================= */
 section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
+  max-width: 1150px;
+  margin: auto;
+  padding: 70px 20px;
 }
 
-h2 {
-    color: #0f4c81;
-    margin-bottom: 15px;
+.section-title {
+  font-size: 32px;
+  color: #0f4c81;
+  margin-bottom: 30px;
 }
 
-h3 {
-    color: #1e88e5;
+/* ================= CARDS ================= */
+.card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
 }
 
-.box {
-    background: white;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-ul {
-    padding-left: 20px;
+/* ================= COUNTERS ================= */
+.counters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 20px;
 }
 
+.counter {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.counter h3 {
+  font-size: 34px;
+  color: #1e88e5;
+  margin: 0;
+}
+
+/* ================= TABLE ================= */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-th {
-    background: #e3f2fd;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th, td {
-    padding: 14px;
-    border: 1px solid #ddd;
+  padding: 14px;
+  border: 1px solid #ddd;
 }
 
+th {
+  background: #e3f2fd;
+}
+
+/* ================= FOOTER ================= */
 footer {
-    background: #0f4c81;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    font-size: 14px;
+  background: #0f4c81;
+  color: #fff;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 14px;
 }
 
-/* BUTTONS */
-.btn {
-    display: inline-block;
-    background: #ff9800;
-    color: white;
-    padding: 14px 26px;
-    margin: 10px;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 30px;
-    transition: 0.3s ease;
+/* ================= FLOATING WHATSAPP ================= */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  padding: 16px 18px;
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 999;
 }
 
-.btn:hover {
-    background: #e68900;
-    transform: scale(1.05);
-}
+.whatsapp:hover { transform: scale(1.1); }
 
-.btn-secondary {
-    background: #ffffff;
-    color: #0f4c81;
-    border: 2px solid white;
-}
-
-.btn-secondary:hover {
-    background: #eaf3ff;
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+  header h1 { font-size: 34px; }
 }
 </style>
-
 </head>
 
 <body>
 
+<!-- NAV -->
+<nav>
+  <div class="brand">Premier Germany Education</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#fees">Fees</a>
+    <a href="#compare">Compare</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
 <header>
-<h1>German Public University Guidance</h1>
-<p>Honest • Transparent • Experience-Driven</p>
-<p>No fake promises | No private university push | Pay only after admit</p>
+  <div class="hero-box">
+    <h1>Premier Germany Education</h1>
+    <p>German Public University Guidance</p>
+    <p>No Fake Promises · No Private University Push · Pay Only After Admit</p>
+
+    <a href="#contact" class="btn btn-primary">Free Profile Evaluation</a>
+    <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-outline">WhatsApp Us</a>
+  </div>
 </header>
 
-<section>
-<div class="box">
-<h2>Who This Is For</h2>
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">Why Premier Germany Education?</h2>
+
+<div class="card">
 <ul>
-<li>Students aiming for German public universities</li>
-<li>Students confused about APS, ECTS, SOPs & deadlines</li>
-<li>Students who want honest admission chances</li>
-<li>Students who don’t want to be pushed into private universities</li>
+<li>100% FREE profile evaluation</li>
+<li>Very straightforward about admission chances</li>
+<li>German public universities only</li>
+<li>No fake promises or guarantees</li>
+<li>Experience-based guidance</li>
 </ul>
 </div>
 
-<div class="box">
-<h2>FREE Profile Evaluation (₹0)</h2>
-<p>Before you pay anything, we evaluate your profile for free.</p>
-<ul>
-<li>Eligibility for public universities</li>
-<li>APS feasibility</li>
-<li>ECTS & academic background</li>
-<li>Realistic admission chances</li>
-</ul>
-<p><strong>Outcome:</strong> Strong / Borderline / Not suitable right now</p>
-<p>If your chances are low, we tell you honestly.</p>
+<div class="counters card">
+<div class="counter"><h3>₹14K</h3><p>Initial Processing Fee</p></div>
+<div class="counter"><h3>₹26K</h3><p>Total Consultancy Fee</p></div>
+<div class="counter"><h3>0%</h3><p>Private University Push</p></div>
 </div>
+</section>
 
-<div class="box">
-<h2>No Fake Promises. Ever.</h2>
-<ul>
-<li>No admission guarantees</li>
-<li>No visa guarantees</li>
-<li>No “100% success” claims</li>
-<li>No unrealistic shortlists</li>
-</ul>
-<p>Final decisions are made by universities, APS, Uni-Assist and the German Embassy.</p>
-</div>
+<!-- FEES -->
+<section id="fees">
+<h2 class="section-title">Our Transparent Fee Model</h2>
 
-<div class="box">
-<h2>Public Universities ONLY</h2>
-<p>We guide students exclusively for German public universities.</p>
-<ul>
-<li>No commissions</li>
-<li>No tie-ups</li>
-<li>No private university pressure</li>
-</ul>
-<p>We would rather lose a client than misguide a student.</p>
-</div>
-
-<div class="box">
-<h2>Our Fee Model</h2>
+<div class="card">
 <h3>Step 1: Profile Evaluation — FREE</h3>
-
 <h3>Step 2: Processing Start Fee — ₹14,000</h3>
 <ul>
 <li>APS processing guidance</li>
 <li>Public university shortlisting</li>
-<li>SOP structure guidance</li>
-<li>CV review (EU format)</li>
-<li>Application strategy</li>
+<li>SOP structure & CV review</li>
 </ul>
-<p><strong>Non-refundable once processing begins.</strong></p>
 
-<h3>Step 3: Remaining Fee — Pay ONLY after Admit</h3>
+<h3>Step 3: Remaining Fee — Only After Admit</h3>
 <p>No admit → No remaining payment</p>
-<p><strong>Total Consultancy Fee: ₹26,000</strong></p>
-</div>
-
-<div class="box">
-<h2>Mandatory Official Fees (Paid by Applicant)</h2>
-<ul>
-<li>APS official fee</li>
-<li>IELTS / TOEFL fee</li>
-<li>University / Uni-Assist fees</li>
-<li>Courier & translations (if applicable)</li>
-</ul>
-<p>We do not collect or handle official payments.</p>
-</div>
-
-<div class="box">
-<h2>Market Comparison</h2>
-<table>
-<tr>
-<th>Aspect</th>
-<th>Market</th>
-<th>Our Model</th>
-</tr>
-<tr>
-<td>Total Fee</td>
-<td>₹38k – ₹70k</td>
-<td>₹26k</td>
-</tr>
-<tr>
-<td>Upfront Payment</td>
-<td>Full amount</td>
-<td>₹14k only</td>
-</tr>
-<tr>
-<td>Private University Push</td>
-<td>Common</td>
-<td>Never</td>
-</tr>
-</table>
-</div>
-
-<div class="box">
-<h2>Contact</h2>
-<p>Email: yourmail@gmail.com</p>
-<p>WhatsApp: +91-XXXXXXXXXX</p>
-<button>Request Free Profile Evaluation</button>
+<p><strong>Total Fee: ₹26,000</strong></p>
 </div>
 </section>
 
+<!-- COMPARE -->
+<section id="compare">
+<h2 class="section-title">Market Comparison</h2>
+
+<div class="card">
+<table>
+<tr><th>Aspect</th><th>Market</th><th>Premier Germany Education</th></tr>
+<tr><td>Total Fee</td><td>₹38k – ₹70k</td><td>₹26k</td></tr>
+<tr><td>Upfront Payment</td><td>Full</td><td>₹14k only</td></tr>
+<tr><td>Private University Push</td><td>Common</td><td>Never</td></tr>
+</table>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2 class="section-title">Contact & Free Evaluation</h2>
+
+<div class="card">
+<p><strong>Email:</strong> yourmail@gmail.com</p>
+<p><strong>WhatsApp:</strong> +91XXXXXXXXXX</p>
+
+<a href="https://forms.gle/YOURFORM" class="btn btn-primary">Start Free Profile Evaluation</a>
+</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-<p>All services are advisory in nature. Admission & visa decisions are made by authorities.</p>
+<p>All services are advisory in nature. Admission & visa decisions are made solely by authorities.</p>
 </footer>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
+
+<script>
+const cards = document.querySelectorAll(".card");
+const reveal = () => {
+  cards.forEach(card => {
+    if (card.getBoundingClientRect().top < window.innerHeight - 100) {
+      card.classList.add("show");
+    }
+  });
+};
+window.addEventListener("scroll", reveal);
+reveal();
+</script>
 
 </body>
 </html>
-
