@@ -50,10 +50,13 @@ nav a {
 }
 
 .logo {
-  height: 42px;           /* Desktop size */
+  height: 44px;        /* Perfect for navbar */
   width: auto;
+  max-width: 140px;   /* Prevents oversized logos */
   object-fit: contain;
+  image-rendering: crisp-edges;
 }
+
 
 .brand span {
   color: #ffffff;
@@ -64,12 +67,11 @@ nav a {
 /* Mobile size */
 @media (max-width: 768px) {
   .logo {
-    height: 34px;
-  }
-  .brand span {
-    font-size: 18px;
+    height: 36px;
+    max-width: 120px;
   }
 }
+
 nav a:hover { text-decoration: underline; }
 
 /* ================= HERO ================= */
@@ -457,6 +459,7 @@ reveal();
 
 </body>
 </html>
+
 
 
 
