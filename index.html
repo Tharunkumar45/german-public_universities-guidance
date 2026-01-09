@@ -45,6 +45,24 @@ nav a {
 }
 
 nav a:hover { text-decoration: underline; }
+  .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand span {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 
 /* ================= HERO ================= */
 header {
@@ -286,7 +304,10 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div class="brand">GoGermany Consulting</div>
+  <div class="brand">
+  <img src="logo.png" alt="GoGermany Consulting" class="logo">
+  <span>GoGermany Consulting</span>
+</div>
   <div>
     <a href="#about">About</a>
     <a href="#fees">Fees</a>
@@ -428,6 +449,7 @@ reveal();
 
 </body>
 </html>
+
 
 
 
