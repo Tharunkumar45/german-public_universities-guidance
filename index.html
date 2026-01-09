@@ -48,10 +48,41 @@ nav a:hover { text-decoration: underline; }
 
 /* ================= HERO ================= */
 header {
-  background: linear-gradient(135deg, #0d4749, #1aa3a3);
-  padding: 110px 20px;
+  background: radial-gradient(circle at top, #1aa3a3, #0d4749);
+  padding: 120px 20px;
   text-align: center;
   color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated glow blobs */
+header::before,
+header::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floatGlow 10s infinite alternate ease-in-out;
+}
+
+header::before {
+  top: -100px;
+  left: -100px;
+}
+
+header::after {
+  bottom: -100px;
+  right: -100px;
+  animation-delay: 4s;
+}
+
+@keyframes floatGlow {
+  from { transform: translateY(0px); }
+  to { transform: translateY(40px); }
 }
 
 .hero-box {
@@ -61,6 +92,13 @@ header {
   padding: 45px;
   border-radius: 18px;
   backdrop-filter: blur(12px);
+  animation: heroFloat 6s ease-in-out infinite;
+@keyframes heroFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
 }
 
 header h1 {
@@ -83,6 +121,14 @@ header p {
   background: #ff9800;
   color: #ffffff;
   transition: 0.3s ease;
+  box-shadow: 0 0 0 rgba(255,152,0,0.6);
+animation: pulse 2s infinite;
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,152,0,0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(255,152,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,152,0,0); }
+}
+
 }
 
 .btn:hover {
@@ -381,6 +427,7 @@ reveal();
 
 </body>
 </html>
+
 
 
 
